@@ -16,6 +16,7 @@ ON t1.idPedido = t2.idPedido
 
 WHERE dtPedido < '2018-01-01'
 AND dtPedido >= DATE('2018-01-01','-6 MONTH')
+AND idVendedor IS NOT NULL
 
 GROUP BY t1.idPedido,
          t2.idVendedor,
